@@ -96,11 +96,28 @@ body {
     gap: 8rem;
     padding: 1rem 4rem;
   }
-  .container-three {
-    display: flex;
-    flex-direction: column;
+  .container-three > h1 {
+    margin: 6rem auto 3rem auto;
+    text-align: center;
+    font-size: 3rem;
   }
+  .container-three > div {
+    display: flex;
+    gap: 8rem;
+    padding: 1rem 4rem;
+  }
+  .container-three > div > div:nth-of-type(3) > div {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 2rem;
+    justify-content: space-around;
+    align-items: center;
+}
   .mobile {
+    display: none;
+  }
+
+  .sidebar {
     display: none;
   }
   
@@ -136,4 +153,33 @@ body {
   .mobile {
     display: block;
   }
+  .sidebar {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index:1;
+    right: 0;
+    padding:0;
+    
+  }
+  .sidebar > ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .sidebar li {
+  display: block;
+  }
+  .sidebar a {
+    padding:1rem 0.5rem;
+    display: block;
+    cursor: pointer;
+    }
+    .sidebar a:hover {
+      background-color: grey;
+    }
+    .sidebar:target {
+      display: block;
+    }
   }
