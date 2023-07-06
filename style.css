@@ -27,12 +27,23 @@ body {
     justify-content: space-around;
     padding: 0;
     padding: 1rem;
+    margin: 0;
   }
   
   nav li {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  nav a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+  }
+  nav a:hover {
+    background-color: #f6454f;
+    color: white ;
   }
   
   img {
@@ -120,7 +131,10 @@ body {
   .sidebar {
     display: none;
   }
-  
+  nav {
+    position: sticky;
+    top:0;
+  }
   @media screen and (max-width: 500px) {
     nav {
       padding: 0.5rem 1rem;
@@ -135,6 +149,7 @@ body {
       flex-direction: column;
       visibility: hidden;
       display: none;
+    
     }
     .container {
       padding:1rem 0.5rem;
@@ -154,32 +169,54 @@ body {
     display: block;
   }
   .sidebar {
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: #fff;
-    z-index:1;
-    right: 0;
-    padding:0;
-    
-  }
-  .sidebar > ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  .sidebar li {
-  display: block;
-  }
-  .sidebar a {
-    padding:1rem 0.5rem;
-    display: block;
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    z-index: 1;
+    background-color: #eee;
     cursor: pointer;
+  }
+  .sidebar-container {
+    position:relative;
+    width:100%;
+    height: 100vh;
+    z-index: 1;
+  }
+  .close-wrapper {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    z-index:-1;
+    background-color:#eeeeeeb5;
+  }
+  .sidebar-content {
+    width:80%;
+    height : 100vh;
+    background-color:white;
+    padding: 20px;
     }
-    .sidebar a:hover {
-      background-color: grey;
+    .sidebar-content > ul {
+      list-style-type: none;
+      margin:0;
+      padding:0;
     }
-    .sidebar:target {
+    .sidebar:target{
       display: block;
+    }
+    .sidebar-content li {
+      display: block;
+      padding:1rem;
+    }
+    .sidebar-content a {
+      display: block;
+      padding:0.5rem;
+    }
+    .sidebar-content a:hover {
+      background-color: #eeeeeeb5;
     }
   }
