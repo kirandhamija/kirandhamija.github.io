@@ -1,0 +1,32 @@
+.face {
+    height: 80vh;
+    width: 80vh;
+    background-color:rgb(255, 235, 205);
+    border-radius: 300px;
+}
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+.eye-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.eye{
+    margin: 9rem 5rem;
+    height:15vh;
+    width:15vh;
+    border-radius:70px ;
+    background-color: blue;
+}
+.dot{
+    margin:-13.5rem 7.5rem;
+    height:4vh ;
+    width: 4vh;
+    border-radius:20px;
+    background-color: black;
+}
