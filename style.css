@@ -115,6 +115,12 @@ img {
   flex-direction: column;
 }
 
+.container-three {
+  align-items: center;
+  height: 90vh;
+}
+
+
 .box {
   display: flex;
   flex: 1;
@@ -122,11 +128,15 @@ img {
   align-items: center;
   gap: 8rem;
   padding: 1rem 4rem;
+  align-items: stretch;
+  width: 100%;
+  overflow: scroll;
 }
 
 .card {
   flex: 1;
   background-color: red;
+  min-width: 200px;
 }
 
 .blank {
@@ -146,6 +156,43 @@ img {
 nav {
   position: sticky;
   top: 0;
+}
+
+.container-four {
+  display: grid;
+  flex-direction: column;
+}
+
+.container-four>h1 {
+  display: block;
+  justify-self: center;
+}
+
+.skill-one {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 2rem 5rem;
+}
+
+.skill-two {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 2rem 5rem;
+}
+
+.skill-three {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  padding: 2rem 5rem;
 }
 
 @media screen and (max-width: 500px) {
@@ -248,4 +295,8 @@ nav {
   .sidebar-content a:hover {
     background-color: #eeeeeeb5;
   }
+
+
+
+
 }
