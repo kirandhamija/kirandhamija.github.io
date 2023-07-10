@@ -34,6 +34,7 @@ nav li {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 nav a {
@@ -117,7 +118,6 @@ img {
 
 .container-three {
   align-items: center;
-  height: 90vh;
 }
 
 
@@ -126,23 +126,33 @@ img {
   flex: 1;
   justify-content: center;
   align-items: center;
-  gap: 8rem;
-  padding: 1rem 4rem;
+  gap: 4vw;
+  padding: 6rem 2vh;
   align-items: stretch;
   width: 100%;
-  overflow: scroll;
+
 }
 
 .card {
   flex: 1;
-  background-color: red;
+  background-color: white;
   min-width: 200px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.411);
+  aspect-ratio: 2/1;
+}
+
+.card>div:nth-of-type(2) {
+  margin-bottom: 0;
+}
+
+.card:hover {
+  background-color: red;
+  transform: translate(0px, -40px);
 }
 
 .blank {
   height: 35vh;
   width: 100%;
-  background-color: blue;
 }
 
 .mobile {
@@ -156,16 +166,34 @@ img {
 nav {
   position: sticky;
   top: 0;
+  background-color: white;
 }
 
 .container-four {
-  display: grid;
+  display: flex;
   flex-direction: column;
+
 }
 
-.container-four>h1 {
-  display: block;
-  justify-self: center;
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10vh;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.container-four :h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.container-four>div>div:nth-of-type(img) {
+  width: 300px;
+
 }
 
 .skill-one {
@@ -175,10 +203,12 @@ nav {
   align-items: center;
   gap: 5rem;
   padding: 2rem 5rem;
+  flex: 2;
 }
 
 .skill-two {
   display: flex;
+  flex: 2;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
@@ -194,6 +224,7 @@ nav {
   gap: 5rem;
   padding: 2rem 5rem;
 }
+
 
 @media screen and (max-width: 500px) {
   nav {
@@ -296,6 +327,11 @@ nav {
     background-color: #eeeeeeb5;
   }
 
+  .box {
+    display: flex;
+    justify-content: flex-start;
+    overflow: scroll;
+  }
 
 
 
