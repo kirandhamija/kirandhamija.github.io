@@ -1,0 +1,29 @@
+.parent {
+  width:770px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap:10px;
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 10px;
+  place-items: center;
+}
+.parent >div {
+  padding-top:16px;
+  padding-bottom:16px;
+  width:375px;
+  background: white;
+  display: grid;
+  place-items: center;
+}
+.parent >div:nth-child(7){
+  grid-column-start:1;
+  grid-column-end:3;
+  width:100%;
+}
+.parent >div:nth-child(8){
+  grid-column-start:1;
+  grid-column-end:3;
+  width:100%;
+}

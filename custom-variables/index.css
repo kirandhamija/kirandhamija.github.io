@@ -10,7 +10,6 @@ html {
 }
 
 body {
-  display: flex;
   max-width: 400px;
   border: 1px solid #bcbcbc;
   flex-flow: row nowrap;
@@ -19,14 +18,14 @@ body {
 
 }
 
-body>div>div {
+body>div>div:nth-of-type(2) {
   display: flex;
   color: var(--hcolor, "black");
 }
 
 [type="button"] {
   background: var(--brandColor, "green");
-  color: white;
+  color: var(--carBg, "white");
   border: none;
   padding: 0.3rem 0.8rem;
   font-weight: bold;
