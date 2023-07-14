@@ -1,7 +1,8 @@
+
 .parent {
   width:770px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap:10px;
   background: #eee;
@@ -17,13 +18,18 @@
   display: grid;
   place-items: center;
 }
-.parent >div:nth-child(7){
-  grid-column-start:1;
-  grid-column-end:3;
-  width:100%;
-}
 .parent >div:nth-child(8){
   grid-column-start:1;
   grid-column-end:3;
   width:100%;
+}
+.parent >div:nth-child(9){
+  grid-column-start:1;
+  grid-column-end:3;
+  width:100%;
+}
+.parent >div:nth-child(1){
+  grid-row-start:1;
+  grid-row-end:4;
+  height:100%;
 }

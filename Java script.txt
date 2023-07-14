@@ -1,0 +1,91 @@
+14/7
+
+Console was cleared
+undefined
+let student = {
+    name: "Kiran",
+    rollno: "123",
+    isEnrolled: true,
+}
+undefined
+student
+{name: 'Kiran', rollno: '123', isEnrolled: true}
+student.rollno
+'123'
+let arr =[kiran, 54]
+VM703:1 Uncaught ReferenceError: kiran is not defined
+    at <anonymous>:1:11
+(anonymous) @ VM703:1
+let arr =["kiran", 54]
+undefined
+arr.pop()
+54
+arr
+['kiran']
+arr.pop()
+'kiran'
+arr
+[]
+arr.push("Kiran")
+1
+arr.push(["Chandigarh", "Sector-34"])
+2
+arr
+(2) ['Kiran', Array(2)]0: "Kiran"1: Array(2)0: "Chandigarh"1: "Sector-34"length: 2[[Prototype]]: Array(0)length: 2[[Prototype]]: Array(0)
+arr[1][0]
+'Chandigarh'
+function logvalue()
+{
+    console.log("The function is executed")
+}
+undefined
+logvalue()
+VM1179:3 The function is executed
+undefined
+logvalue
+ƒ logvalue()
+{
+    console.log("The function is executed")
+}
+
+DelO Node JS -Javascript Runtime
+Javascript Engine - is different for different browser
+
+.console.log - used for printing
+variable declaration
+var- global scope
+let- local scope
+const - local
+type of - used to check data type
+
+
+data type: 
+undefined boolean array null
+
+Object data type----
+
+array
+
+everything in Javascript is an object except number, boolean, indefined
+
+arr.length
+
+person.push("value") - to add new value
+array.pop("value") - to remove last value
+
+
+javascript functions:
+
+Function definition : function function-name() {}
+
+function call: 
+function-name()
+
+a function can return anything.
+
+undefined- when no argument is passed to parameter.
+
+== -> compares value only
+=== -> compares data type as well
+
+<script>src="index.css"</script>
