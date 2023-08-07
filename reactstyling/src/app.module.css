@@ -1,0 +1,28 @@
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.input {
+    color: chocolate;
+    background-color: aquamarine;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid chocolate;
+}
+
+.inputtwo {
+    background-color: chocolate;
+    color: aquamarine;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid aquamarine;
+}
+
+.inputtwo::placeholder {
+    color: aquamarine;
+}
+
+.button {}
