@@ -5,18 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>warzone</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>Warzone</h1>
     <main>
-        <button type="button">Start Game</button>
-        <section>
-            <div>Number of rounds:</div>
-            <div>Player One Wins:</div>
-            <div>Player Two Wins:</div>
-        </section>
+        <div><button type="button">Start Game</button>
+
+            <div id="result-container">
+                <h1 id="result"></h1>
+            </div>
+            <section>
+                <div id="rounds"></div>
+                <div id="p1wins"></div>
+                <div id="p2wins"></div>
+            </section>
     </main>
-    <script src="index.js"></script>
+    <script src="/Warzone/index.js"></script>
+</body>
 
 </html>

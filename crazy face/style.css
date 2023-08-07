@@ -1,0 +1,76 @@
+.face {
+    height: 80vh;
+    width: 80vh;
+    background-color: #ffebcd;
+    border-radius: 300px;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.eye-container {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.eye-one {
+    align-items: center;
+
+}
+
+.eye-two {
+    justify-items: center;
+}
+
+.eye {
+    display: flex;
+    height: 15vh;
+    width: 15vh;
+    border-radius: 70px;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 10s ease;
+    -webkit-transition: padding 2s;
+}
+
+.dot {
+    display: flex;
+    height: 4vh;
+    width: 4vh;
+    border-radius: 20px;
+    background-color: black;
+
+}
+
+.mouth-container {
+    display: flex;
+    height: 50%;
+    width: 100%;
+    color: blue;
+    justify-content: center;
+}
+
+.mouth {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    height: 20vh;
+    width: 50vh;
+    background-color: red;
+
+}
+
+.eye:hover {
+    background-color: blueviolet;
+    -webkit-transition: border-radius 2s;
+}

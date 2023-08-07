@@ -1,0 +1,29 @@
+main>div {
+    display: grid;
+    place-items: center;
+}
+
+#result-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(184, 17, 17);
+}
+
+button {
+    width: max-content;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(184, 17, 17);
+    color: azure
+}
+
+section {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 5rem;
+}

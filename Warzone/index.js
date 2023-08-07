@@ -7,67 +7,146 @@ let game = {
         health: 100,
         wins: 0,
     },
-    round: 1,
-    turn: "playerOne"
+    rounds: 0,
+    turn: "playerOne",
 };
 
-let button = document
+let button = document.querySelector("[type='button']");
+let rounds = document.querySelector("#rounds");
+let playerOneWins = document.querySelector("#p1wins");
+let playerTwoWins = document.querySelector("#p2wins");
+let result = document.querySelector("#result");
+let resultContainer = document.querySelector("#result-container");
 
+//
 const BulletIntensity = () => {
     return Math.round(Math.random() * 100);
-
-}
+};
 
 const playerTurn = () => {
     let selection = Math.round(Math.random() * 1);
 
-    // check if the value is true
+    // check if the the value is truthy
     if (selection === 1) {
         return "playerOne";
     } else {
         return "playerTwo";
     }
-}
+};
 
+// INITALIZING THE GAME
 const startRound = () => {
-    console.log("Initial state: ", game.playerOne.health, game.playerTwo.health);
     if (game.turn === "playerOne") {
+        //
         game.playerTwo.health = game.playerTwo.health - BulletIntensity();
-        console.log(game.playerTwo);
-        //game.turn = "playerTwo";
-    }
-    else {
+
+        // updating the next player turn
+        game.turn = "playerTwo";
+    } else {
+        //
         game.playerOne.health = game.playerOne.health - BulletIntensity();
-        console.log(game.playerOne);
-        //game.turn = "playerOne";
-
-        console.log("Final state: ", game.playerOne.health, game.playerTwo.health);
+        // updating the next player turn
+        game.turn = "playerOne";
     }
-
-}
+    console.log("Final State", game.playerOne.health, game.playerTwo.health);
+};
 
 const roundWinner = () => {
     if (game.playerOne.health > game.playerTwo.health) {
-        game.playerOne.wins = game.playerOne.wins + 1;
+        game.playerOne.wins += 1;
     } else {
-        game.playerTwo.wins = game.playerTwo.wins + 1;
+        game.playerTwo.wins += 1;
     }
-}
+};
 
-do {
-    console.log("Round:", game.round);
-    console.log("Player Turn :", "playeTurn")
+const updateUI = () => {
+    rounds.innerText = "Number of Rounds: " + game.rounds;
+    playerOneWins.innerText = "Player one Wins: " + game.playerOne.wins;
+    playerTwoWins.innerText = "Player Two Wins: " + game.playerTwo.wins;
+};
 
-    do {
-        startRound();
+// START GAME
+// starting the game in loop until one of the player health become zero
+
+// This loop is run when the game is start
+// do {
+//   console.log("Round: ", game.rounds);
+//   console.log("Player Turn : ", playerTurn());
+
+//   // This loop will run when the round
+//   do {
+//     startRound();
+//   } while (game.playerOne.health >= 0 && game.playerTwo.health >= 0);
+
+//   // Updating a round
+//   game.rounds = game.rounds + 1;
+//   game.turn = playerTurn();
+
+//   roundWinner();
+
+//   // updating the health of player at the start of the round
+//   game.playerOne.health = 100;
+//   game.playerTwo.health = 100;
+// } while (game.rounds <= 3);
+
+// WITH FOR LOOP
+// for (let i = 1; i <= 3; i++) {
+//   game.rounds += 1;
+//   game.turn = playerTurn();
+//   console.log("The Round: ", game.rounds);
+//   console.log("The Player: ", game.playerOne, game.playerTwo);
+//   console.log("The turn: ", game.turn);
+
+//   while (game.playerOne.health >= 0 && game.playerTwo.health >= 0) {
+//     startRound();
+//   }
+
+//   updateUI();
+
+//   // STEP 1: check the winner
+//   roundWinner();
+
+//   // STEP 2: Reset the health
+//   game.playerOne.health = 100;
+//   game.playerTwo.health = 100;
+// }
+
+times = 1;
+
+button.addEventListener("click", () => {
+    if (game.rounds >= 3) {
+        console.log("The Game has ended");
+        return;
+    } else {
+        game.rounds += 1;
+        game.turn = playerTurn();
+        console.log("The Round: ", game.rounds);
+        console.log("The Player: ", game.playerOne, game.playerTwo);
+        console.log("The turn: ", game.turn);
+        while (game.playerOne.health >= 0 && game.playerTwo.health >= 0) {
+            startRound();
+        }
+
+        // STEP 1: check the winner
+        roundWinner();
+        updateUI();
+
+        if (game.rounds === 3) {
+            if (game.playerOne.wins > game.playerTwo.wins) {
+                resultContainer.style.display = "grid";
+                result.innerText = "Player one Won the Match";
+            } else {
+                result.innerText = "Player Two Won the Match";
+            }
+
+        }
+
+
+        // STEP 2: Reset the health
+        game.playerOne.health = 100;
+        game.playerTwo.health = 100;
     }
-    while (game.playerOne.health >= 0 && game.playerTwo.health >= 0);
-    roundWinner();
-    game.round = game.round + 1;
-    game.turn = playerTurn();
-    game.playerOne.health = 100;
-    game.playerTwo.health = 100;
-} while (game.round <= 3);
+
+});
 
 console.log(game);
-
